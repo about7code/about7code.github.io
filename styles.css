@@ -1,77 +1,99 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 body{
-	width: 100vm;
-	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #333;
+	font-family: 'Roboto Mono', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	background: #fcec59;
+	color: #fff;
+
+}
+
+.nav-items{
+	list-style: none;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	background: #222;
+	padding-right: 5%;
+	font-size: 1.1rem;
 
 }
 
-.emboss-txt{
-	position: relative;
-	font-size: 180px;
-	font-family: 'Fjalla One', sans-serif;
-	letter-spacing: 5px;
-	color: rgb(207, 207, 207);
-	text-shadow: 
-	/*3d layers*/
-	0px 0px 1px rgb(167, 167, 167),
-	0px 1px 1px rgb(167, 167, 167),
-	0px 2px 1px rgb(167, 167, 167),
-
-	1px 1px 1px rgb(167, 167, 167),
-	1px 2px 1px rgb(167, 167, 167),
-	1px 3px 1px rgb(167, 167, 167),
-
-	2px 2px 1px rgb(167, 167, 167),
-	2px 3px 1px rgb(167, 167, 167),
-	2px 4px 1px rgb(167, 167, 167),
-
-	/*Long soft bottom*/
-
-	1px 10px 30px rgba(0, 0, 0, 0.8),
-	1px 10px 70px rgba(0, 0, 0, 0.8), 
-
-	/*short soft bottom*/
-
-	0px 5px 5px rgba(0, 0, 0, 0.8),
-
-	/*left shadow*/
-	-5px 5px 20px rgba(0, 0, 0, 0.8),
-
-	/*right shadow*/
-	5px 5px 20px rgba(0, 0, 0, 0.8),
-
-	/*white light*/
-	1px 1px 120px rgba(255, 255, 255, 0.5);
-	
+.nav-items a{
+	padding: 0 1.5em;
+	transition: .2s ease;
 }
 
-.emboss-txt::after{
-	content: "HELLO.";
-	font-size: 180px;
-	letter-spacing: 5px;
-	font-family: 'Fjalla One', sans-serif;
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-shadow: 0px 0px 100px rgba(11, 124, 199, 0.5);
-	animation: cycle 1s linear infinite;
+.nav-items a:hover{
+	background: #333;
+	color: #fff;
+	/*border-radius: 50px;*/
+	padding: 5px 1.5em;
 }
 
-@keyframes cycle{
-	0% {text-shadow: 0px 0px 100px rgba(11, 124, 199, 0.5);}
-	20% {text-shadow: 0px 0px 100px rgba(168, 11, 199, 0.5);}
-	40% {text-shadow: 0px 0px 100px rgba(11, 199, 96, 0.5);}
-	60% {text-shadow: 0px 0px 100px rgba(199, 11, 11, 0.5);}
-	80% {text-shadow: 0px 0px 100px rgba(199, 96, 11, 0.5);}
+
+.logo{
+	padding-left: 5%;
 }
+
+@media(max-width: 900px){
+	body{
+		overflow: hidden;
+		margin: 0;
+	}
+	.navbar{
+		margin: 0;
+		padding-top: 1px;
+		display: block;
+	}
+
+	.logo{
+		justify-content: center;
+		text-align: center;
+	}
+
+	.nav-items{
+		justify-content: center;
+		padding-bottom: 5%;
+		margin-right: 2%;
+		text-align: center;
+		align-items: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
