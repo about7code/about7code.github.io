@@ -67,6 +67,7 @@ a{
 	}
 
 	.nav-items{
+		flex-wrap: wrap;
 		justify-content: center;
 		padding-bottom: 5%;
 		margin-right: 2%;
